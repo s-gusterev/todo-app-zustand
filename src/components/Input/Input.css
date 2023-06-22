@@ -1,0 +1,40 @@
+.add-task {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.add-task::after {
+  position: absolute;
+  content: '';
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--border-color);
+  border-radius: 100%;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.add-task__input {
+  width: 100%;
+  border-radius: var(--border-radius);
+  background: var(--background);
+  box-shadow: var(--box-shadow);
+  padding-left: 72px;
+  padding-block: 23px;
+  padding-right: 23px;
+  border: none;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: var(--ff);
+  letter-spacing: -0.25px;
+  color: var(--color-text-primary);
+}
+
+.add-task__input::placeholder {
+  color: var(--color-text-secondary);
+}
+
+.add-task__input:focus {
+  outline: 2px solid var(--border-color);
+}
