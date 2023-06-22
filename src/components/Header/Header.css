@@ -1,0 +1,26 @@
+.header {
+  padding-top: 70px;
+  padding-bottom: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.header__title {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.header__button {
+  background-color: transparent;
+  border: none;
+  width: 26px;
+  height: 26px;
+  background-image: url(../../assets/icons/light-theme.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
