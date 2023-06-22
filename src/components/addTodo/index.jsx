@@ -1,5 +1,5 @@
 import './Input.css';
-const Input = () => {
+const AddTodo = () => {
   return (
     <div className='add-task'>
       <input
@@ -12,4 +12,4 @@ const Input = () => {
   );
 };
 
-export default Input;
+export default AddTodo;

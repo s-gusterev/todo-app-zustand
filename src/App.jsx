@@ -1,12 +1,15 @@
 import './App.css';
 import Header from './components/Header';
-import Input from './components/Input';
+import AddTodo from './components/addTodo';
+import { useTheme } from './store';
 
 const App = () => {
+  const theme = useTheme((state) => state.theme);
+
   return (
-    <div className='app'>
+    <div className='app' id={theme}>
       <Header />
-      <Input />
+      <AddTodo />
     </div>
   );
 };
