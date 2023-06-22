@@ -1,0 +1,9 @@
+.main {
+  border-radius: var(--border-radius);
+  background: var(--background);
+  box-shadow: var(--box-shadow);
+}
+
+.main__tasks {
+  display: grid;
+}
