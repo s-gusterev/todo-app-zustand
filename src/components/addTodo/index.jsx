@@ -1,15 +1,20 @@
 import './AddTodo.css';
 import { useTodos } from '../../store';
+import { useFilter } from '../../store';
 import { useState } from 'react';
 
 const AddTodo = () => {
   const addTodo = useTodos((state) => state.addTodo);
   const [value, setValue] = useState('');
+  const { filter, setFilter } = useFilter();
 
   const handleAddTodo = (e) => {
     if (e.key === 'Enter') {
       addTodo(value);
       setValue('');
+      if (filter === 'completed') {
+        setFilter('all');
+      }
     }
   };
 

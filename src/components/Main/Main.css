@@ -57,3 +57,7 @@
 .main__button_clear {
   font-weight: 400;
 }
+
+.main__button_clear:disabled {
+  color: var(--color-text-secondary);
+}

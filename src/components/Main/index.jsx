@@ -22,7 +22,20 @@ const Main = () => {
     }
   });
 
-  const todosActive = todos.filter((todo) => !todo.completed);
+  console.log(todos);
+
+  const todosActive = useTodos((state) =>
+    state.todos.filter((todo) => !todo.completed)
+  );
+
+  const todosCompleted = useTodos((state) =>
+    state.todos.filter((todo) => todo.completed)
+  );
+
+  const handleDeleteCompletedTodos = () => {
+    deleteCompletedTodo();
+    setFilter('all');
+  };
 
   return (
     <main className='main'>
@@ -38,8 +51,13 @@ const Main = () => {
             />
           ))}
 
-        {todos.length === 0 && filter !== 'completed' && (
-          <p className='main__not-tasks'>No more tasks for today</p>
+        {todos.length === 0 &&
+          filter !== 'completed' &&
+          filter !== 'active' && (
+            <p className='main__not-tasks'>No more tasks for today</p>
+          )}
+        {todos.length === 0 && filter === 'active' && (
+          <p className='main__not-tasks'>No more active tasks </p>
         )}
         {todos.length === 0 && filter === 'completed' && (
           <p className='main__not-tasks'>No more completed tasks </p>
@@ -77,13 +95,15 @@ const Main = () => {
               Completed
             </button>
           </div>
-          <button
-            type='button'
-            className='main__button main__button_clear'
-            onClick={() => deleteCompletedTodo()}
-          >
-            Clear Completed
-          </button>
+          {todosCompleted.length > 0 && (
+            <button
+              type='button'
+              className='main__button main__button_clear'
+              onClick={() => handleDeleteCompletedTodos()}
+            >
+              Clear Completed
+            </button>
+          )}
         </div>
       )}
     </main>
