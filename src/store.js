@@ -42,4 +42,17 @@ export const useTodos = create((set, get) => ({
       todos: todos.filter((todo) => todo.id !== id),
     });
   },
+
+  deleteCompletedTodo: () => {
+    const { todos } = get();
+
+    set({
+      todos: todos.filter((todo) => !todo.completed),
+    });
+  },
+}));
+
+export const useFilter = create((set) => ({
+  filter: 'all',
+  setFilter: (value) => set({ filter: value }),
 }));

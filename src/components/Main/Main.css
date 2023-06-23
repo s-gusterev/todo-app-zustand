@@ -7,3 +7,53 @@
 .main__tasks {
   display: grid;
 }
+
+.main__not-tasks {
+  color: var(--color-text-primary);
+  font-size: 18px;
+  margin: 80px auto;
+}
+
+.main__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px 20px;
+}
+
+.main__info-active-task {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  letter-spacing: -0.194px;
+  margin: 0;
+}
+
+.main__button {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  font-family: Josefin Sans;
+  font-weight: 700;
+  letter-spacing: -0.194px;
+  border: none;
+  background-color: transparent;
+  font-family: var(--ff);
+  cursor: pointer;
+  padding: 0;
+  margin-right: 19px;
+}
+
+.main__button:hover {
+  color: var(--color-text-primary);
+}
+.main__button:last-child {
+  margin-right: 0;
+}
+
+.main__button:disabled {
+  color: #3a7cfd;
+  cursor: auto;
+}
+
+.main__button_clear {
+  font-weight: 400;
+}
