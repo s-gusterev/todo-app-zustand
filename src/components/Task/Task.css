@@ -1,7 +1,10 @@
 .task {
   padding: 21px 21px 25px 72px;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
   border-bottom: 1px solid var(--border-color);
   color: var(--color-text-primary);
+  background-color: var(--background);
   font-size: 18px;
   letter-spacing: -0.25px;
   position: relative;
