@@ -38,3 +38,12 @@
 .add-task__input:focus {
   outline: 2px solid var(--border-color);
 }
+
+@media (max-width: 425px) {
+  .add-task__input {
+    padding-left: 62px;
+    padding-block: 18px;
+    padding-right: 18px;
+    font-size: 12px;
+  }
+}
