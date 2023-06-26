@@ -12,6 +12,7 @@ const App = () => {
       <Header />
       <AddTodo />
       <Main />
+      <p className='app__text'>Drag and drop to reorder list</p>
     </div>
   );
 };

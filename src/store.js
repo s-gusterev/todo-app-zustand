@@ -11,12 +11,16 @@ export const useTheme = create((set) => ({
 
 export const useTodos = create((set, get) => ({
   todos: [
-    { id: 1, title: 'Complete online JavaScript course', completed: true },
-    { id: 2, title: 'Jog around the park 3x', completed: false },
-    { id: 3, title: '10 minutes meditation', completed: false },
-    { id: 4, title: 'Read for 1 hour', completed: false },
-    { id: 5, title: 'Pick up groceries', completed: false },
-    { id: 6, title: 'Complete Todo App on Frontend Mentor', completed: false },
+    { id: '1', title: 'Complete online JavaScript course', completed: true },
+    { id: '2', title: 'Jog around the park 3x', completed: false },
+    { id: '3', title: '10 minutes meditation', completed: false },
+    { id: '4', title: 'Read for 1 hour', completed: false },
+    { id: '5', title: 'Pick up groceries', completed: false },
+    {
+      id: '6',
+      title: 'Complete Todo App on Frontend Mentor',
+      completed: false,
+    },
   ],
   addTodo: (title) =>
     set((state) => {
@@ -48,6 +52,16 @@ export const useTodos = create((set, get) => ({
 
     set({
       todos: todos.filter((todo) => !todo.completed),
+    });
+  },
+
+  reorderTodo: (src, dest) => {
+    const { todos } = get();
+    const [removed] = todos.splice(src, 1);
+    todos.splice(dest, 0, removed);
+
+    set((state) => {
+      return [...state.todos, todos];
     });
   },
 }));

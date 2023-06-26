@@ -5,3 +5,11 @@
   padding-inline: 24px;
   box-sizing: border-box;
 }
+
+.app__text {
+  color: var(--color-text-secondary);
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: -0.194px;
+  margin-top: 50px;
+}
