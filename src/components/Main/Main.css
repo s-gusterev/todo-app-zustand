@@ -2,7 +2,6 @@
   border-radius: var(--border-radius);
   background: var(--background);
   box-shadow: var(--box-shadow);
-  overflow: hidden;
 }
 
 .main__tasks {
@@ -61,4 +60,24 @@
 
 .main__button_clear:disabled {
   color: var(--color-text-secondary);
+}
+
+@media (max-width: 425px) {
+  .main__info {
+    position: relative;
+  }
+
+  .main__buttons {
+    background-color: var(--background);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 68px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+  }
 }

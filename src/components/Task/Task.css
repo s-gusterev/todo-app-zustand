@@ -81,3 +81,16 @@
 .task:hover .task__delete {
   opacity: 1;
 }
+
+@media (max-width: 768px) {
+  .task__delete {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 425px) {
+  .task {
+    padding: 19px 19px 21px 62px;
+    font-size: 12px;
+  }
+}

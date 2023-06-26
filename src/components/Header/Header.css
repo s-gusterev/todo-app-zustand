@@ -24,3 +24,12 @@
   background-repeat: no-repeat;
   cursor: pointer;
 }
+
+@media (max-width: 425px) {
+  .header {
+    padding-bottom: 30px;
+  }
+  .header__title {
+    font-size: 20px;
+  }
+}
